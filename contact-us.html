@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact-us</title>
+    <link rel="stylesheet" href="CONTACT.css" />
+    <script defer>
+      function myFunction() {
+        var link =
+          "mailto:devchoudhary5499@gmail.com?subject= ISSUE Message from " +
+          document.getElementById("p2").value +
+          "&body=" +
+          "user name-" +
+          document.getElementById("p1").value +
+          " " +
+          "facing issue-" +
+          document.getElementById("p3").value +
+          " ";
+        window.location.href = link;
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>CONTACT-US</h1>
+    </div>
+    <div class="main">
+      <form>
+        <p>ENTER YOUR NAME:<input type="text" id="p1" required /></p>
+        <p>ENTER YOUR EMAIL: <input type="email" required id="p2" /></p>
+        <p>
+          ENTER YOUR ISSUE:<textarea
+            cols="14"
+            rows="4"
+            required
+            id="p3"
+          ></textarea>
+        </p>
+
+        <button onclick="myFunction()" id="submit">SEND</button>
+      </form>
+    </div>
+  </body>
+</html>
