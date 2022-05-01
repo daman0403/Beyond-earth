@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact-page</title>
+    <link rel="stylesheet" href="fact-page.css">
+    <script>
+        var i = 0;
+        function move() {
+            document.getElementById("myProgress").style.display="inline";
+                if (i == 0) {
+                i = 1;
+                var elem = document.getElementById("myBar");
+                var width = 1;
+                var id = setInterval(frame, 22);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        window.open("feedback.html");
+                        i = 0;
+                       
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                         }
+                            }
+                                }
+                              
+                            }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            
+            
+            <br>
+            <a href="index.html">
+                <img src="/factpage-pictures/homepagelogo.png" width="40px">
+            </a>
+            <a href="#">
+                <img src="/factpage-pictures/previous.png" width="45px">
+            </a>
+            <button onclick="move()" style="position: relative; left: 80vw;">NEXT PAGE</button>
+            <br>
+            
+    </header>
+    <div id="myProgress" style="display: none;">
+        <div id="myBar"></div>
+    </div>
+    <div class="fact">
+       <h1>SPACE FACTS</h1>
+    </div>
+    <div class="fact1">
+        NASA has the first satellite launched into space, starting with the Explorer 1 satellite in 1958. It was the first spacecraft to detect the Van Allen radiation belt, returning data until its batteries were exhausted after nearly four months. It remained in orbit until 1970. Explorer 1 was designed and built by the California Institute of Technology's JPL under the direction of Dr. William H. Pickering. It was the second satellite to carry a mission payload (Sputnik 2 was the first). The total mass of the satellite was 13.97 kg (30.8 lb), of which 8.3 kg (18 lb) were instrumented
+    </div>
+    <div class="fact2">
+        Germany launched the first rocket capable of reaching space in 1942. Dubbed the V-2 rocket, it was not actually intended for space travel. Instead, the V-2 was constructed as a ballistic missile during WWII. Nonetheless, it was revealed in a flight test to be the first man-made object to fly into space.
+
+    </div>
+    <div class="fact3">
+        In a first such phenomenon on a planet beyond Earth, the European Space Agency's Trace Gas Orbiter (TGO) has discovered a green light in Mars' atmosphere. A similar glow is sometimes seen on the Earth's limb by astronauts on the space station. According to the scientists, the emissions are formed due to the collisions between atmospheric molecules and charged particles that are racing away from the sun.
+    </div>
+    <div class="end">
+        “That's one small step for a man, one giant leap for mankind.” - Neil Armstrong
+    </div>
+    
+   
+</body>
+</html>
