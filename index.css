@@ -1,6 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
 header{
-          background: url('/images1stpage/earthspace.jpeg') no-repeat center center fixed;
+          background: url('images1stpage\earthspace.jpeg') no-repeat center center fixed;
 
           background-size: cover;
           width: 100%;
@@ -101,7 +101,7 @@ header{
       }
     .video-content{
       padding: 10px 19px;
-      background-image: url(/images1stpage/classroom.jpg);
+      background-image: url(images1stpage\classroom.jpg);
       background-size: cover;
       height: 80vh;
       background-repeat: no-repeat;
@@ -114,7 +114,7 @@ header{
         width: 53%;
         height: 60vh;
         padding: 4px 0px 4px 18px;
-        background-image: url(/images1stpage/b2.jpg);
+        background-image: url(images1stpage\b2.jpg);
        
         border-radius: 10px;
     }
