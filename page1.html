@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+        header {
+            background: url('earthSpace.jpeg') no-repeat center center fixed;
+            height: 150vh;
+            width: 100%;
+            background-size: cover;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .topbar {
+            position: fixed;
+            z-index: 100;
+            display: inline;
+            background-color: aqua;
+        }
+
+        .navbar {
+            color: white;
+            /* list-style-type: none; */
+            position: fixed;
+            left: 33.5%;
+
+
+            padding-top: 10px;
+
+        }
+
+        .navlist li a {
+            color: white;
+            display: block;
+            text-decoration: none;
+            position: relative;
+            padding: 0.2em 0;
+        }
+
+        .navlist li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0.2em;
+            left: 0;
+            width: 100%;
+            height: 0.02em;
+            background-color: rgb(255, 255, 255);
+            opacity: 0;
+            transition: opacity 300ms, transform 300ms;
+        }
+
+        a:hover::after,
+        a:focus::after {
+            opacity: 1;
+            transform: translate3d(0, 0.2em, 0);
+        }
+
+
+        .navlist {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navlist li {
+            padding: 0px 13px;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 19px;
+
+        }
+
+        .navlist li a::after {
+            opacity: 1;
+            transform: scale(0);
+            transform-origin: center;
+        }
+
+        .navlist li a:hover::after,
+        .navlist li a:focus::after {
+            transform: scale(1);
+        }
+
+
+        .container {
+            color: whitesmoke;
+            position: relative;
+            top: 25vh;
+
+        }
+
+        .name {
+            position: absolute;
+            left: 30%;
+            /* display: block; */
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 80px;
+        }
+
+        .tagline {
+            position: absolute;
+            top: 15vh;
+            font-family: monospace;
+            left: 7vh;
+            font-size: 18px;
+        }
+
+        #beyondEarth {
+            animation: slideright 2s ease-out;
+        }
+
+        #taglineANi {
+            animation: slideleft 2s ease-out;
+        }
+
+        @keyframes slideright {
+            0% {
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+                visibility: visible;
+
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+
+            }
+        }
+
+        @keyframes slideleft {
+            0% {
+                -webkit-transform: translateX(100%);
+                transform: translateX(250%);
+                visibility: visible;
+
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+
+            }
+        }
+
+        @media only screen and (max-width: 920px) {
+            .name {
+                position: absolute;
+                left: 10%;
+                /* display: block; */
+                font-family: 'Libre Franklin', sans-serif;
+                font-size: 80px;
+            }
+
+            .tagline {
+                position: absolute;
+                top: 20vh;
+                font-family: monospace;
+                left: 7vh;
+                font-size: 18px;
+            }
+
+            .navbar {
+                color: white;
+                /* list-style-type: none; */
+                position: fixed;
+                left: 10%;
+
+
+                padding-top: 10px;
+
+            }
+        }
+
+        @media only screen and (max-width: 730px) {
+            .tagline {
+                position: absolute;
+                top: 30vh;
+                font-family: monospace;
+                left: 3vh;
+                font-size: 18px;
+            }
+        }
+
+        @media only screen and (max-width: 540px) {
+            .navbar {
+                color: white;
+                /* list-style-type: none; */
+                position: fixed;
+                left: 0;
+
+
+                padding-top: 10px;
+
+            }
+
+            .navlist li {
+                padding: 0px 8px;
+                font-family: monospace;
+                font-size: 19px;
+
+            }
+        }
+
+        #myVideo {
+
+            position: absolute;
+            top: 130vh;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 30%;
+        }
+
+        .aboutmore {
+            position: relative;
+            top: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topbar">
+            <div class="navbar">
+                <ul class="navlist">
+                    <li><a href=""> Home</a></li>
+                    <li><a href="">Light&nbsp;years</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Avout&nbsp;us</a></li>
+                    <li><a href="">Contact&nbsp;us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="name" id="beyondEarth">BEYOND EARTH <div class="tagline" id="taglineANi">THE STARS DON'T LOOKA
+                    BIGGER BUT THEY DO LOOK BRIGHTER</div>
+            </div>
+            <!-- <div class="tagline" id="taglineANi">THE STARS DON'T LOOKA BIGGER BUT THEY DO LOOK BRIGHTER</div> -->
+        </div>
+    </header>
+    <div class="video">
+        <video autoplay muted loop id="myVideo">
+            <source src="video1.mp4" type="video/mp4" />
+        </video>
+    </div>
+    <div class="aboutmore">
+        hello there!
+        Come along and join the greatest venture to anywhere but earth and travel far km aka light-years.
+        here get a brief explanation of space adventure starting from very near satellites and planets to deep sea of
+        galaxies, rotating wheel of planets, not comeback black holes,
+        cool cosmos, a history that is still changing present, very unpredictable future,
+        hot topics like SUN, India great contribution, the list never ends but u will not get bored that's our bet,
+        tighten your seat belts and
+        LET LAUNCH
+    </div>
+</body>
+
+</html>
